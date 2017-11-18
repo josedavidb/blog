@@ -1,0 +1,12 @@
+<h1> Este es mi articulo <%= @nuevo_articulo.title %></h1>
+<p> Este es el cuerpo de mi articulo: <%= @nuevo_articulo.body %></p>
+<%unless @nuevo_articulo.user.nil? %>
+<p>Escrito por: <%=@nuevo_articulo.user.email%></p>
+
+<%end%>
+
+<div class="seccionComentarios">
+	<h3>Comentarios</h3>
+	<%= render "comments/form" %>
+</div>
+<p>Visitas: <%=@nuevo_articulo.visit_count%></p>

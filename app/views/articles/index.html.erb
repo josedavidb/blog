@@ -1,0 +1,25 @@
+<div class="container">
+
+	<h1 class="tituloSeccion"> Esta es mi seccion de articulos! <h1>
+	<div class="presentacionArticulos">
+		
+
+		<div class="conjuntoArticulos d-flex">
+	
+			<% @arreglo_de_articulos.each do |iterador_articulo| %>
+			<div class="espacioArticulo">
+				<h2 class="tituloArticulos"><%= iterador_articulo.title %></h2>
+				<p class="cuerpoArticulos"><%= iterador_articulo.body %></p>
+
+				<div class="d-flex justify-content-center">
+					<%= button_to 'Editar', "/articles/#{iterador_articulo.id}/edit", :method => :get , class:"botonLeerMas mr-1"%>
+					<%= button_to 'Eliminar', iterador_articulo, :method => :delete,class:"botonLeerMas mr-1"%>
+					<%= button_to 'Leer mas', iterador_articulo, :action => :show, :method => :get, class:"botonLeerMas mr-1"%>
+				</div>
+			</div>
+			<%end%>
+
+		</div>
+	</div>
+
+</div>

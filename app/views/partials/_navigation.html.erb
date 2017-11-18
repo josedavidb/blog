@@ -1,0 +1,29 @@
+<header class="d-flex">
+  <h1><%= link_to "Logo", root_path %></h1>
+  <ul class="d-flex enlaces">
+  	<li class="itemMenu"><%= link_to "Inicio", root_path %></li>
+  	<li class="itemMenu">Diseno Web</li>
+  	<li class="itemMenu">Programacion</li>
+  	<li class="itemMenu">Logica</li>
+
+    <%if user_signed_in? %>
+    <li>
+    <%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete, class: "itemMenu" %>
+    </li>
+
+    <li>
+    <%= current_user.email%>
+    </li>
+
+    <%else%>
+    <li>
+      <%= link_to "Iniciar sesion", new_user_session_path, class: "itemMenu"%>
+    </li>
+
+    <li>
+      <%= link_to "Crear cuenta", new_user_registration_path,class: "itemMenu" %>
+    </li>
+    <%end%>
+
+    </ul>
+</header>

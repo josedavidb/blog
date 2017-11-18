@@ -1,0 +1,160 @@
+html,body{
+	margin: 0;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	background: #D7D9A9;
+}
+
+header{
+	padding: 10px;
+	justify-content: space-around;
+	align-items: center;
+	background: #467302;
+	color: white;
+}
+
+
+header h1{
+	margin: 0;
+}
+
+header h1 a:visited{
+	color: white;
+
+}
+
+header h1 a:hover{
+	text-decoration: none;
+}
+.enlaces{
+
+	margin: 0;
+	font-size: 1.3em;
+	list-style: none;
+}
+
+.itemMenu{
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.itemMenu a:visited{
+	color: white;
+	text-decoration: none;
+}
+
+.itemMenu a:hover{
+	color: #D7D9A9;
+	text-decoration: none;
+}
+
+.slider{
+	height: 500px;
+	
+	background-image: url(programacion.jpg);
+	background-size: 100% 100%;
+	color: white;
+	
+
+}
+
+.seccionSlider{
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	text-align: center;
+}
+
+.slider p{
+	font-size: 1.2em;
+
+	font-weight: bold;
+}
+
+.presentacionArticulos{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tituloSeccion{
+	margin-top: 30px;
+	text-align: center;
+}
+
+.conjuntoArticulos{
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.tituloArticulos{
+	font-size: 0.8em;
+	color: 467302;
+	border-bottom: 0.3px solid black;
+	color: #888C03;
+}
+
+.cuerpoArticulos{
+	margin-top: 10px;
+	font-size: 0.5em;
+}
+
+.espacioArticulo{
+	width: 400px;
+	margin-top: 20px;
+	border: 1px solid black;
+	padding: 20px;
+}
+
+.campoArticulo{
+	margin-top: 30px;
+}
+
+.campoArticulo input{
+	height: 50px;
+	background: transparent;
+}
+
+.campoArticulo textarea{
+	height: 200px;
+}
+.campoArticulo input,textarea{
+	width: 600px;
+	border: none;
+	font-size: 1.2em ;
+	padding: 5px;
+	background: #B8BA91;
+	border: 0.5px solid rgba(0,0,0,0.3);
+
+}
+
+.botonLeerMas{
+	width: 100px;
+	height: 30px;
+	font-size: 0.5em;
+	border: none;
+	cursor: pointer;
+	background-color: #888C03;
+}
+
+.botonLeerMas:hover{
+	color: white;
+	background: #102601;
+}
+
+.error{
+	background-color: #102601;
+	color: white;
+	margin-top: 10px;
+}
+
+
+
+

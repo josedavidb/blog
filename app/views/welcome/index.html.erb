@@ -1,0 +1,42 @@
+<div class="slider">
+	<div class="seccionSlider container d-flex">
+	<h1>Blog de Jose Basanta</h1>
+	<p>Bienvenido a mi blog, donde compartire mi conocimiento acerca de la programacion,
+	el desarrollo web, administracion de sistemas y computadoras</p>
+	</div>
+</div>
+
+<div class="container">
+	<div class="container">
+
+		<h1 class="tituloSeccion"> Esta es mi seccion de articulos! <h1>
+		<div class="presentacionArticulos">
+		
+			<div class="row">
+			<div class="col-md-6 col-sm-12">
+	
+				<% @mitad.each do |iterador_articulo| %>
+				<div class="espacioArticulo">
+					<h2 class="tituloArticulos"><%= iterador_articulo.title %></h2>
+					<p class="cuerpoArticulos"><%= iterador_articulo.body %></p>
+					<%= button_to 'Leer mas', "articles/#{iterador_articulo.id}", :method => :get, class:"botonLeerMas" %>
+				</div>
+				<%end%>
+			</div>
+
+			<div class="col-md-6 col-sm-12">
+	
+				<% @mitad2.each do |iterador_articulo| %>
+				<div class="espacioArticulo">
+					<h2 class="tituloArticulos"><%= iterador_articulo.title %></h2>
+					<p class="cuerpoArticulos"><%= iterador_articulo.body %></p>
+					<%= button_to 'Leer mas', "articles/#{iterador_articulo.id}", :method => :get, class:"botonLeerMas" %>
+
+				</div>
+				<%end%>
+			</div>
+
+			</div>
+		</div>
+	</div>
+</div>

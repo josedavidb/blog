@@ -1,0 +1,27 @@
+
+<div class="container">
+	<h3 class="tituloSeccion">Aqui puedes <%=name%> un nuevo articulo</h3>
+
+	<%=
+
+	 form_for(@nuevo_articulo) do |f| %>
+	 <% @nuevo_articulo.errors.full_messages.each do |message| %>
+	 <div class="error">
+	 	<%= message %>
+	 </div>
+	 <%end%>
+	
+	<div class="campoArticulo">
+		<%= f.text_field :title, placeholder: "Ingresa el titulo del nuevo articulo" %>
+	</div>
+
+	<div class="campoArticulo">
+		<%= f.text_area :body, placeholder: "Ingresa el cuerpo del nuevo articulo" %>
+	</div>
+
+	<div class="campoArticulo">
+		<%= f.submit "Crear articulo", id: "botonCrearArticulo"%>
+	</div>
+
+	<%end%>
+</div>
